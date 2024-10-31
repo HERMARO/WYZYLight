@@ -1,0 +1,106 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    background-image: none;
+    background-size: cover;
+    transition: background-image 0.5s ease;
+  }
+  
+  #circle-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* 根据需要调整 */
+  }
+  
+  .circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .circle-text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+
+  .progress-ring {
+    position: absolute;
+    transform: rotate(-90deg); /* 使进度从12点钟方向开始 */
+    top: 0;
+    left: 0;
+  }
+  
+  
+  .progress-ring__circle {
+    stroke-width: 7; /* 进度条宽度增加到7px */
+    transition: stroke-dasharray 0.5s ease; /* 平滑的进度变化 */
+    stroke-dasharray: 0, 239; /* 初始进度为0 */
+    stroke-dashoffset: 0;
+  }
+
+  #white-circle .circle-text {
+    color: black; /* 使文本在白色背景上可见 */
+  }
+  
+  #black-circle .circle-text {
+    color: white; /* 黑色背景上的文本已经是白色 */
+  }
+  
+  
+  #white-circle {
+    background-color: white;
+  }
+  
+  #black-circle {
+    background-color: black;
+    border: 3px solid white;
+  }
+  
+  #text-container {
+    position: absolute;
+    top: 70%; /* 网页高度的四分之三处 */
+    left: 50%; /* 宽度居中 */
+    transform: translate(-50%, -50%);
+    width: 33.33%; /* 网页宽度的三分之一 */
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  #progress-container {
+    position: absolute;
+    top: 15%; /* 调整以确保进度条位于文本正下方 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 33.33%;
+    height: 20px;
+    background-color: black;
+    border: 2px solid white;
+    opacity: 0; /* 初始不可见 */
+    transition: opacity 0.5s ease;
+  }
+  
+  #progress-bar {
+    height: 100%;
+    background-color: white;
+    width: 0%; /* 初始宽度为0，表示进度条未填充 */
+    transition: width 10s linear;
+  }
+
+  
+  
+  
