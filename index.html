@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Circles</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="circle-container">
+        <div class="circle" id="white-circle"><span class="circle-text">开启</span></div>
+        <div class="circle" id="black-circle">
+            <span class="circle-text">关闭</span>
+            <!-- 添加SVG作为进度条 -->
+            <svg class="progress-ring" width="160" height="160">
+                <circle class="progress-ring__circle" stroke="white" stroke-width="3" fill="transparent" r="76" cx="80" cy="80" />
+            </svg>
+        </div>
+    </div>
+    
+<div id="text-container"></div>
+<div id="text-container"></div>
+<div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
